@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleção com Imagens e Texto</title>
+    <style>
+        #container {
+            text-align: center;
+            padding: 20px;
+        }
+        #resultado {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <label for="selecao">Escolha uma opção:</label>
+        <select id="selecao" onchange="mostrarConteudo()">
+            <option value="padrao">Opção Padrão</option>
+            <option value="outra">Outra Opção</option>
+        </select>
+    </div>
+    <div id="resultado">
+        <img src="logo.png" alt="Imagem">
+        <p>Texto de Exemplo</p>
+    </div>
+    <script>
+        function mostrarConteudo() {
+            var selecao = document.getElementById("selecao");
+            var resultado = document.getElementById("resultado");
+
+            if (selecao.value === "padrao") {
+                resultado.style.display = "block";
+            } else {
+                resultado.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
